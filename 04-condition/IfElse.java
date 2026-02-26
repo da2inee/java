@@ -1,5 +1,6 @@
 /**
  * 4단계: 조건문 (if, else if, else)
+ * - 조건이 참인 블록만 실행되고 나머지는 건너뜀
  */
 public class IfElse {
     public static void main(String[] args) {

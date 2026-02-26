@@ -1,17 +1,14 @@
 /**
  * 2단계: 변수와 데이터 타입
- * 
- * int   - 정수
- * double - 실수
- * String - 문자열 (큰따옴표)
- * boolean - true / false
+ *
+ * int - 정수, double - 실수, String - 문자열, boolean - 참/거짓
  */
 public class Variables {
     public static void main(String[] args) {
-        int age = 20;
-        double height = 175.5;
-        String name = "홍길동";
-        boolean isStudent = true;
+        int age = 20;              // 정수
+        double height = 175.5;     // 실수
+        String name = "홍길동";    // 문자열 (참조 타입)
+        boolean isStudent = true;  // 참/거짓
 
         System.out.println("이름: " + name);
         System.out.println("나이: " + age);
