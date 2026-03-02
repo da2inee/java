@@ -63,7 +63,7 @@ public class ExceptionExample {
         } catch (Exception e) {
             System.out.println("기타: " + e.getMessage());
         }
-    }
+    }ㄴ
 
     /** 예시 5: finally - 예외가 나든 안 나든 한 번은 실행됨 (정리용) */
     static void finallyExample() {
