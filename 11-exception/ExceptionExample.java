@@ -48,7 +48,7 @@ public class ExceptionExample {
     static void nullExample() {
         String str = null;
         try {
-            System.out.println(str.length());  // str이 null → 예외
+            System.out.println(str);  // str이 null → 예외
         } catch (NullPointerException e) {
             System.out.println("null 참조.");
         }
@@ -58,6 +58,7 @@ public class ExceptionExample {
     static void multiCatchExample() {
         try {
             int n = Integer.parseInt("가나다");  // NumberFormatException
+            System.out.println("n"+n);  
         } catch (NumberFormatException e) {
             System.out.println("NumberFormatException 처리");
         } catch (Exception e) {
@@ -70,6 +71,7 @@ public class ExceptionExample {
         try {
             System.out.println("try 안");
             int a = 10 / 0;  // 0으로 나눔 → ArithmeticException
+            System.out.println("a"+a);  
         } catch (ArithmeticException e) {
             System.out.println("catch: 0으로 나눔");
         } finally {
