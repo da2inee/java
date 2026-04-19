@@ -15,6 +15,10 @@
 
 5. @Transactional이 동작하는 방식?
 - 답:
+  - 스프링은 `@Transactional`이 붙은 메서드에 대해 **프록시(AOP)** 를 만들어 트랜잭션을 적용한다.
+  - 메서드 호출 전 **트랜잭션 시작**, 정상 종료 시 **커밋**, 예외 발생 시 **롤백**한다.
+  - 기본 롤백 규칙은 **RuntimeException/Error는 롤백**, **Checked Exception은 커밋**이며, 필요하면 `rollbackFor`로 조정한다.
+  - 프록시 기반이라 **같은 클래스 내부의 자기 호출(self-invocation)** 은 트랜잭션이 적용되지 않을 수 있다는 점을 주의한다.
 
 ## MVC / REST
 6. @PathVariable, @RequestParam, @RequestBody 차이?
